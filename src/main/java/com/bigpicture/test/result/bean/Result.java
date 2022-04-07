@@ -1,4 +1,4 @@
-package com.bigpicture.test.film.result.bean;
+package com.bigpicture.test.result.bean;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -9,7 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 
-import com.bigpicture.test.film.report.bean.Report;
+import com.bigpicture.test.report.bean.Report;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity

@@ -1,4 +1,4 @@
-package com.bigpicture.test.film.report.controller;
+package com.bigpicture.test.report.controller;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,14 +17,14 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bigpicture.test.film.bean.Film;
-import com.bigpicture.test.film.report.bean.Report;
-import com.bigpicture.test.film.report.repository.ReportRepository;
 import com.bigpicture.test.film.repository.FilmRepository;
-import com.bigpicture.test.film.result.bean.Result;
 import com.bigpicture.test.person.bean.Person;
 import com.bigpicture.test.person.repository.PersonRepository;
 import com.bigpicture.test.planet.bean.Planet;
 import com.bigpicture.test.planet.repository.PlanetRepository;
+import com.bigpicture.test.report.bean.Report;
+import com.bigpicture.test.report.repository.ReportRepository;
+import com.bigpicture.test.result.bean.Result;
 
 @RestController
 public class ReportController {

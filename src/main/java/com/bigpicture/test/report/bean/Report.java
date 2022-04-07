@@ -1,4 +1,4 @@
-package com.bigpicture.test.film.report.bean;
+package com.bigpicture.test.report.bean;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import com.bigpicture.test.film.result.bean.Result;
+import com.bigpicture.test.result.bean.Result;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
