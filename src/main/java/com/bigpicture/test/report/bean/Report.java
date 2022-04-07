@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Report {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue
 	private long id;
 	
 	private String query_criteria_character_phrase;
@@ -76,6 +76,9 @@ public class Report {
 				+ ", query_criteria_planet_name=" + query_criteria_planet_name + ", result=" + result + "]";
 	}
 
-
+	public void clearResult() {
+		if(!this.result.isEmpty())
+		this.result.clear();
+	}
 
 }

@@ -25,6 +25,7 @@ import com.bigpicture.test.planet.repository.PlanetRepository;
 import com.bigpicture.test.report.bean.Report;
 import com.bigpicture.test.report.repository.ReportRepository;
 import com.bigpicture.test.result.bean.Result;
+import com.bigpicture.test.result.repository.ResultRepository;
 
 @RestController
 public class ReportController {
@@ -40,6 +41,9 @@ public class ReportController {
 	
 	@Autowired
 	public ReportRepository reportRepo;
+	
+	@Autowired
+	public ResultRepository resultRepo;
 	
 	@GetMapping("/reports")
 	public List<Report> getReports(){
@@ -62,6 +66,7 @@ public class ReportController {
 		List<Planet> planetAll=planetRepo.findAll();
 		
 		List<Person> matchedPeople=new ArrayList<Person>();
+		
 		
 		
 		List<Result> result=new ArrayList<Result>();
@@ -91,6 +96,14 @@ public class ReportController {
 						
 		}
 		
+
+		report.setId(id);
+		//clear all results from previous search
+		List<Result> resultAll=resultRepo.findAll();
+		for(Result item:resultAll) {
+			if(item.getReport().getId()==id)
+				resultRepo.deleteById(item.getId());
+			}
 		
 		report.setResult(result);
 		reportRepo.save(report);

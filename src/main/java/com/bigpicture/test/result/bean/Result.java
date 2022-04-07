@@ -27,7 +27,7 @@ public class Result {
 	private long planet_id;
 	private String planet_name;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name="report_id")
 	private Report report;
 	
